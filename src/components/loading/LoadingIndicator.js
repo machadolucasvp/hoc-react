@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
-const LoadingIndicator = ({ loading }) => {
+import React from 'react';
+import styles from './LoadingIndicator.module.css';
+const LoadingIndicator = () => {
   return (
-    <Fragment>
-      {loading && <p>Loading...</p>}
-    </Fragment>
+    <div className={styles.loader}>
+    </div>
   );
 }
 

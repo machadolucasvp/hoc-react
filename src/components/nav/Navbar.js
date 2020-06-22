@@ -1,13 +1,14 @@
 import React from 'react';
 import withLoadingIndicator from '../loading/LoadingIndicator.hoc';
-import Navlist from './NavList';
+import Navlist from './Navlist';
+import styles from './Navbar.module.css';
 
 const NavlistWithLoading = withLoadingIndicator(Navlist);
 
-const NavBar = () => {
+const NavBar = ({ isLoading }) => {
   return ( 
-    <nav>
-      <NavlistWithLoading isLoading={true} />
+    <nav className={styles.navbar}>
+      <NavlistWithLoading isLoading={isLoading} />
     </nav>
    );
 }
